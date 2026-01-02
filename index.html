@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Growth Plan - Frontend to Full-Stack Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .phase {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .phase h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .phase h3 {
+            color: #764ba2;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .phase .goal {
+            background: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 3px solid #4CAF50;
+        }
+        
+        .phase .goal strong {
+            color: #4CAF50;
+        }
+        
+        .outcome {
+            background: #e3f2fd;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            border-left: 3px solid #2196F3;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .study-plan {
+            background: #fff3cd;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 40px 0;
+            border-left: 5px solid #ffc107;
+        }
+        
+        .study-plan h2 {
+            color: #f57c00;
+            margin-bottom: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .milestones {
+            background: #d1f2eb;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 5px solid #00bfa5;
+        }
+        
+        .milestones h2 {
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        
+        .emoji {
+            font-size: 1.2em;
+            margin-right: 8px;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .phase {
+                padding: 20px;
+            }
+            
+            table {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Career Growth Plan</h1>
+            <p>Frontend to Full-Stack Developer Journey</p>
+        </header>
+        
+        <div class="content">
+            <div class="phase">
+                <h2><span class="emoji">⚙️</span>Phase 1: Foundation & Quick Wins (Weeks 1-4)</h2>
+                <div class="goal">
+                    <strong>Goal:</strong> Build credibility fast, ship value early.
+                </div>
+                
+                <h3>🔹 1. Master the Current Frontend Stack</h3>
+                <ul>
+                    <li>Learn the existing patterns and architecture (how components, API calls, and state are organized).</li>
+                    <li>Pick a few "small but visible" UI improvements—clean up spacing, responsive layout, loading skeletons, accessibility tweaks.</li>
+                    <li>Add charts, cards, and dashboards with a focus on consistency and performance (lazy loading, memoization).</li>
+                </ul>
+                <div class="outcome">
+                    <strong>👉 Outcome:</strong> You become "the person who makes the dashboard feel smooth and polished."
+                </div>
+                
+                <h3>🔹 2. Document & Communicate</h3>
+                <ul>
+                    <li>Start a short weekly progress update (2–3 lines in Slack or email): "Finished X, learned Y, next week focusing on Z."</li>
+                    <li>Shows initiative and maturity. Management notices consistency.</li>
+                </ul>
+            </div>
+            
+            <div class="phase">
+                <h2><span class="emoji">🧩</span>Phase 2: Expand into Backend / Integration (Weeks 5-10)</h2>
+                <div class="goal">
+                    <strong>Goal:</strong> Bridge to Node.js using what you already touch on the frontend.
+                </div>
+                
+                <h3>🔹 1. Request a Small API Task</h3>
+                <ul>
+                    <li>Ask to handle a simple endpoint that powers one of your frontend charts—e.g., a /metrics route in Node.</li>
+                    <li>Learn existing backend conventions (routing, validation, logging).</li>
+                    <li>Add tests for that endpoint.</li>
+                </ul>
+                
+                <h3>🔹 2. Deepen Node.js Skills</h3>
+                <ul>
+                    <li>Daily practice: one small project each week (CLI tool, Express API, background worker).</li>
+                    <li>Learn:
+                        <ul>
+                            <li>Express / Fastify basics</li>
+                            <li>Async patterns (Promises, async/await, streams)</li>
+                            <li>Error handling and logging</li>
+                            <li>Unit testing with Jest / Vitest</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="outcome">
+                    <strong>👉</strong> By week 10, you should be comfortable reading and modifying real backend code.
+                </div>
+            </div>
+            
+            <div class="phase">
+                <h2><span class="emoji">☁️</span>Phase 3: AWS & DevOps Exposure (Weeks 11-20)</h2>
+                <div class="goal">
+                    <strong>Goal:</strong> Move from "consumer of APIs" to "owner of micro-services."
+                </div>
+                
+                <h3>🔹 1. Shadow or Pair on Deployments</h3>
+                <ul>
+                    <li>Ask DevOps or your CTO to show you how the app is deployed:
+                        <ul>
+                            <li>Which AWS services are used (Lambda, ECS, EC2, S3, CloudWatch, RDS)?</li>
+                            <li>How CI/CD works.</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h3>🔹 2. Build a Side or Internal Service</h3>
+                <ul>
+                    <li>Create a micro-service (Node.js + AWS) that solves a real internal pain:
+                        <ul>
+                            <li>Example: an internal metrics collector that posts data to S3 or DynamoDB.</li>
+                        </ul>
+                    </li>
+                    <li>Deploy via AWS Lambda or ECS Fargate.</li>
+                    <li>Add CloudWatch logging and alarms.</li>
+                </ul>
+                <div class="outcome">
+                    <strong>👉</strong> Now you've delivered an end-to-end AWS-hosted product.
+                </div>
+            </div>
+            
+            <div class="phase">
+                <h2><span class="emoji">🚀</span>Phase 4: Visibility & Growth (Ongoing)</h2>
+                <div class="goal">
+                    <strong>Goal:</strong> Get recognized as a high-impact engineer.
+                </div>
+                <ul>
+                    <li>Demo your work in sprint reviews.</li>
+                    <li>Write short technical notes: "How I optimized chart rendering" or "Deploying a Node service to Lambda."</li>
+                    <li>Mentor or assist peers with similar tasks.</li>
+                    <li>Request a 1-on-1 with your CTO every 6–8 weeks to align on goals and get feedback.</li>
+                </ul>
+            </div>
+            
+            <div class="study-plan">
+                <h2><span class="emoji">🧠</span>Study Plan (1 hour a day max)</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Area</th>
+                            <th>Focus</th>
+                            <th>Resource Ideas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Frontend</strong></td>
+                            <td>Advanced React patterns, performance tuning</td>
+                            <td>EpicReact.dev, React docs</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Node.js</strong></td>
+                            <td>REST APIs, async design, testing</td>
+                            <td>Node docs, "Node.js Design Patterns" book</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AWS</strong></td>
+                            <td>Lambda, S3, CloudFormation basics</td>
+                            <td>AWS SkillBuilder, freeCodeCamp AWS courses</td>
+                        </tr>
+                        <tr>
+                            <td><strong>System Design</strong></td>
+                            <td>How data flows from UI → API → Cloud</td>
+                            <td>Grokking System Design, YouTube engineering talks</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="milestones">
+                <h2><span class="emoji">🧭</span>Milestones Checklist</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Milestone</th>
+                            <th>Proof</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Dashboard improvements shipped</td>
+                            <td>PRs merged</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Wrote first Node.js API</td>
+                            <td>Endpoint live</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Automated test added</td>
+                            <td>Jest tests passing</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Deployed Node.js service to AWS</td>
+                            <td>Cloud logs visible</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Presented micro-service to team</td>
+                            <td>Demo done</td>
+                        </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>Leading a small feature end-to-end</td>
+                            <td>Management trust built</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
