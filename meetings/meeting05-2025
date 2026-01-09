@@ -1,0 +1,7 @@
+- I have taken the liberty to add kpis cards
+- I have also added traffic incidentable 
+- The layout is close to the picture 
+- Do we want the legend to be next to the chart or under the chart ?
+- Radial chart is it for more than one metric or we want single metric like the picture = (single)
+- I have to add mobile responsiveness
+- Most dashboards have default data that is fetched and displayed , did we say that will depend on each client ? and each client will also decide what charts to add ? Will it be the sames as phone widgets ?
