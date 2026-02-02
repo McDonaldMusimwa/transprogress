@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>PR Review Checklist</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+      line-height: 1.5;
+      padding: 24px;
+      max-width: 900px;
+    }
+    h2, h3 {
+      margin-top: 24px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      margin: 6px 0;
+    }
+    .nested {
+      margin-left: 24px;
+    }
+    hr {
+      margin: 24px 0;
+    }
+    label {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<h2>PR Review Requirements & Suggestions</h2>
+
+<h3>UI / Controls</h3>
+<ul>
+  <li>
+    <label><input type="checkbox" /> Update the controls button to be a <strong>settings icon only</strong> with a <strong>tooltip</strong> (similar to the map settings control).</label>
+    <ul class="nested">
+      <li><label><input type="checkbox" /> This will work better in dynamic views and keep the UI cleaner.</label></li>
+      <li><label><input type="checkbox" /> Replace the current button-style control with an icon-only version.</label></li>
+    </ul>
+  </li>
+
+  <li>
+    <label><input type="checkbox" /> <strong>Remove the manual mode toggle</strong>.</label>
+    <ul class="nested">
+      <li><label><input type="checkbox" /> If a user opens settings and changes values, it’s implied they are making manual changes.</label></li>
+      <li><label><input type="checkbox" /> The current behaviour was confusing and prevented expected edits.</label></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3>Layout & Spacing</h3>
+<ul>
+  <li>
+    <label><input type="checkbox" /> <strong>Margin Size</strong></label>
+    <ul class="nested">
+      <li><label><input type="checkbox" /> Medium cannot be selected reliably (sometimes only Small and Large work).</label></li>
+      <li><label><input type="checkbox" /> Selection behaviour appears buggy.</label></li>
+      <li><label><input type="checkbox" /> Increase the visual difference between margin sizes so changes are obvious.</label></li>
+    </ul>
+  </li>
+
+  <li>
+    <label><input type="checkbox" /> Move <strong>Legend settings above Margin Size</strong> in the Layout section.</label>
+    <ul class="nested">
+      <li><label><input type="checkbox" /> Legend settings are more likely to be altered.</label></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3>Axis & Ticks</h3>
+<ul>
+  <li>
+    <label><input type="checkbox" /> <strong>Changing tick values causes a 500 error</strong></label>
+    <ul class="nested">
+      <li><label><input type="checkbox" /> Fix the error and add tests.</label></li>
+      <li><label><input type="checkbox" /> Test edge cases:</label></li>
+      <ul class="nested">
+        <li><label><input type="checkbox" /> Comma-separated values (with and without spaces)</label></li>
+        <li><label><input type="checkbox" /> Invalid input</label></li>
+        <li><label><input type="checkbox" /> Input sanitisation (no code / unsafe values)</label></li>
+      </ul>
+    </ul>
+  </li>
+
+  <li>
+    <label><input type="checkbox" /> <strong>Turning off “Show X Axis”</strong></label>
+    <ul class="nested">
+      <li><label><input type="checkbox" /> Currently removes only the label, not the ticks.</label></li>
+      <li><label><input type="checkbox" /> Tick labels overlap and become unreadable.</label></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3>Time Interval</h3>
+<ul>
+  <li>
+    <label><input type="checkbox" /> <strong>Time interval input does not appear editable</strong></label>
+    <ul class="nested">
+      <li><label><input type="checkbox" /> Text input is prone to error.</label></li>
+      <li>
+        <label><input type="checkbox" /> Replace with <strong>two dropdowns</strong>:</label>
+        <ul class="nested">
+          <li><label><input type="checkbox" /> Value (e.g. 0–60 for minutes, 0–24 for hours)</label></li>
+          <li><label><input type="checkbox" /> Unit (minutes, hours, etc.)</label></li>
+        </ul>
+      </li>
+      <li><label><input type="checkbox" /> This would allow removal of the current text input.</label></li>
+    </ul>
+  </li>
+
+  <li>
+    <label><input type="checkbox" /> <strong>Notes / Future Considerations</strong></label>
+    <ul class="nested">
+      <li><label><input type="checkbox" /> Time series is usually on the X axis, but not always.</label></li>
+      <li><label><input type="checkbox" /> Time controls may not always make sense.</label></li>
+      <li><label><input type="checkbox" /> Discuss with the team how to handle this better.</label></li>
+      <li><label><input type="checkbox" /> Start with the dropdown approach and iterate later.</label></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3>Style</h3>
+<ul>
+  <li>
+    <label><input type="checkbox" /> <strong>Line width</strong></label>
+    <ul class="nested">
+      <li><label><input type="checkbox" /> Good idea, but dragging is clunky.</label></li>
+      <li><label><input type="checkbox" /> Support per-line width for multi-axis charts.</label></li>
+      <li><label><input type="checkbox" /> Treat as follow-up if complex.</label></li>
+    </ul>
+  </li>
+
+  <li>
+    <label><input type="checkbox" /> <strong>Enable fill area</strong></label>
+    <ul class="nested">
+      <li><label><input type="checkbox" /> Currently appears to have no effect.</label></li>
+    </ul>
+  </li>
+
+  <li>
+    <label><input type="checkbox" /> <strong>Axis grid line controls</strong></label>
+    <ul class="nested">
+      <li><label><input type="checkbox" /> Y-axis toggle affects the X axis.</label></li>
+      <li><label><input type="checkbox" /> X-axis toggle does not work.</label></li>
+      <li><label><input type="checkbox" /> Rename to <strong>Show Axis Line</strong> or <strong>Show Axis Grid Line</strong>.</label></li>
+      <li><label><input type="checkbox" /> Naming is currently unclear.</label></li>
+    </ul>
+  </li>
+
+  <li>
+    <label><input type="checkbox" /> <strong>Border colour</strong></label>
+    <ul class="nested">
+      <li><label><input type="checkbox" /> Purpose is unclear.</label></li>
+      <li><label><input type="checkbox" /> Does not change any visible colour.</label></li>
+    </ul>
+  </li>
+
+  <li>
+    <label><input type="checkbox" /> <strong>Missing control</strong></label>
+    <ul class="nested">
+      <li><label><input type="checkbox" /> Add ability to change line colour.</label></li>
+      <li><label><input type="checkbox" /> Keep colour options simple.</label></li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h3>Quality & Testing</h3>
+<ul>
+  <li><label><input type="checkbox" /> Overall approach is good, but there are multiple bugs.</label></li>
+  <li><label><input type="checkbox" /> Carefully test all controls.</label></li>
+  <li><label><input type="checkbox" /> Add tests to catch regressions and edge cases.</label></li>
+</ul>
+
+</body>
+</html>
